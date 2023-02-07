@@ -2,9 +2,6 @@
 // Get the postcode from the input field
 let postcode = document.getElementById("postcode").value;
 
-
-
-
 // function to call the adress API when the user submits their postcode
 function callAddressApi(postcode) {
 
@@ -21,6 +18,22 @@ function callAddressApi(postcode) {
     .then(response => response.json())
     .then(data => {
         console.log(data);
+        // get the addresses from the data
+        const addresses = data.addresses;
+
+        // loop through the addresses and add them to the dropdown
+        for (let i = 0; i < addresses.length; i++) {
+            // create a new option element
+            const option = document.createElement("option");
+            // set the value of the option to the address
+            option.value = addresses[i];
+            // set the text of the option to the address
+            option.text = addresses[i];
+            // add the option to the dropdown
+            document.getElementById("addresses").appendChild(option);
+        }
+
+        return addresses;
         
         // more code here
     });
@@ -71,6 +84,14 @@ function callEpcApi(address) {
 // add event listener for the address for waiting for search addresses
 document.getElementById("search-addresses").addEventListener("click", function() {
     callAddressApi(postcode);
+});
+
+//add event listener for the address dropdown
+document.getElementById("addresses").addEventListener("change", function() {
+    // get the address from the dropdown
+    address = document.getElementById("addresses").value;
+    // enable the search epc button
+    document.getElementById("search-epc").disabled = false;
 });
 
 // add event listener for the search epc button when user clicks on their address and presses get my epc data
