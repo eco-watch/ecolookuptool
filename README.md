@@ -11,7 +11,7 @@ A web app that looks up the energy performance of a property given it's address 
 
 ## References
 
-### GetAddress API endpoint: https://api.getAddress.io/find/{postcode}?api-key=1AzPegcMMkOQVoBwvo0EFQ37970  
+### GetAddress API endpoint: https://api.getAddress.io/find/{postcode}?api-key={apiKey}
 
 ### GetAddress API documentation: https://documentation.getaddress.io
 
