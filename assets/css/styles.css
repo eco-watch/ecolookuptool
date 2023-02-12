@@ -9,12 +9,19 @@
   border-right: 5px solid rgb(255, 255, 255);
 }
 
+.bg-img {
+  background-image: url(../images/cityscape.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .green-text {
   color: rgb(244, 240, 240);
   text-align: center;
   padding-top: 50px;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1em;
 
   /* Added a text shadow to create the appearance of a photoshop stroke */
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -30,6 +37,10 @@ video {
   height: auto;
   object-fit: contain;
   z-index: -1;
+  border: 3px solid rgb(255, 255, 255);
+  /* put the border outside of the video */
+  box-sizing: border-box;
+
 }
 
 
@@ -47,3 +58,42 @@ video {
 #searchButton {
   margin-left: 10px;
 }
+
+
+@media (max-width: 767px) {
+  .green-column {
+    height: auto;
+    display: block;
+    text-align: center;
+    padding: 20px;
+    order: 2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .search-column {
+    height: auto;
+    display: block;
+    text-align: center;
+    padding: 20px;
+    order: 1;
+  }
+  video {
+    width: 50%;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: auto;
+  }
+  .green-text {
+    padding-top: 20px;
+    font-size: 1.5em;
+  }
+  #postcodeInput {
+    width: 100%;
+  }
+}
+
+
+
