@@ -1,0 +1,32 @@
+.green-column {
+  background-color: rgb(22, 116, 22);
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+}
+
+.green-text {
+  color: rgb(244, 240, 240);
+  text-align: center;
+  padding-top: 50px;
+  /* make the text bold */
+  font-weight: bold;
+  /* make the text bigger */
+  font-size: 2em;
+}
+
+.search-column {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#postcodeInput {
+  width: 80%;
+}
+
+#searchButton {
+  margin-left: 10px;
+}
