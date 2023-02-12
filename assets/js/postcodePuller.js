@@ -6,7 +6,7 @@ let addressEndpoint = postcode => `https://api.getAddress.io/find/${postcode}?ap
 document.querySelector("#searchButton").addEventListener("click", function(event) {
   event.preventDefault();
   let inputPostcode = document.querySelector("#postcodeInput");
-  //trim, uppercase and remove spaces from postcode to reduce user error
+  //trim, uppercase and remove spaces from postcode to reduce user error due to the API being case and format sensitive
   let postcode = inputPostcode.value.trim().toUpperCase().replace(/\s/g, "");
   //get address data from api
   axios
@@ -59,7 +59,7 @@ document.querySelector("#searchButton").addEventListener("click", function(event
         formGroup.appendChild(clearButton);
       });
     })
-    //log any errors to console
+    //create button handlers for error messages
 .catch(error => {
   console.error(error);
   let formGroup = document.querySelector(".form-group");
