@@ -38,7 +38,6 @@ video {
   object-fit: contain;
   z-index: -1;
   border: 3px solid rgb(255, 255, 255);
-  /* put the border outside of the video */
   box-sizing: border-box;
 
 }
@@ -94,6 +93,3 @@ video {
     width: 100%;
   }
 }
-
-
-
