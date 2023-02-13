@@ -42,7 +42,6 @@ video {
 
 }
 
-
 .search-column {
   height: 100vh;
   display: flex;
@@ -57,7 +56,6 @@ video {
 #searchButton {
   margin-left: 10px;
 }
-
 
 @media (max-width: 767px) {
   .green-column {
