@@ -32,6 +32,7 @@ document.querySelector("#searchButton").addEventListener("click", function (even
       dropdown.addEventListener("change", function () {
         let submitButton = document.createElement("button");
         submitButton.innerText = "Statistics";
+        console.log("created by sean fox")
         submitButton.classList.add("btn", "btn-success", "ml-2");
         submitButton.addEventListener("click", function () {
           window.location.href = "results.html";
