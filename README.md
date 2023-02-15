@@ -1,4 +1,4 @@
-# ecolookuptool
+# Energy Performance Web Application
 
 ## Description
 
