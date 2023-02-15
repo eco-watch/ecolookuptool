@@ -55,7 +55,7 @@ document.querySelector("#searchButton").addEventListener("click", function (even
         addressResultsButton.innerText = "Address results";
         addressResultsButton.classList.add("btn", "btn-success", "ml-2");
         addressResultsButton.addEventListener("click", function () {
-          window.location.href = "https://www.google.com/";
+          window.location.href=("/results.html");
         });
         formGroup.appendChild(addressResultsButton);
         // Add clear button to form group
