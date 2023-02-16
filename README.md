@@ -1,12 +1,14 @@
 
 # THE ECO-LOOKUP WEB APPLICATION (EPC)  <image src="https://img.shields.io/badge/license-MIT-green/size=100"> #
 
+## Live deployment
 
+https://eco-watch.github.io/ecolookuptool/index.html
 
 ## Table of contents
 * [The Scope of the Project](#project-scope)
 * [What is the EPC web application?](#what-it-is)
-* [What does it do?](#what-does-it-do)
+* [What does the EPC web application do exactly?](#what-does-it-do)
 * [User story/acceptence criteria](#user-story)
 * [How does it work?](#how-it-works)
 * [How to use](#how-to-use)
@@ -21,19 +23,18 @@
 
 ## The scope of the project ##
 
-This repo forms the submission materials and deployment of the first of two group projects that count towards the formal grades received from completion of the front-end web development bootcamp. The product has been developed to satisfy the [Requirements](#project-requirements)  at the end of the article
+This repositoery forms the submission materials and deployment of the first of two group projects that count towards the formal grades received from completion of the front-end web development bootcamp. The product has been developed to satisfy the [Requirements](#project-requirements)  at the end of the article
 
 ## What is the EPC web application?
 
-This easy to use EPC web app is built on top of the opendatacommunities Domestic Energy Performance certificate API. The application itself is built using javascript for easy integration into a webpage, much like the opendatacommunities one. The application leverages the postcodefinder.io address lookup API which makes it as easy as  typing a UK postcode, choosing your address from the dropdown menu then click for your results. It's at this point you can save or print. 
+This easy to use EPC web app is built on top of the opendatacommunities Domestic Energy Performance certificate API. The application itself is built using javascript for easy integration into a webpage, much like the opendatacommunities one. The application leverages the getaddress.io address lookup API which makes it as easy as typing a UK postcode, choosing your address from the dropdown menu then click for your results. It's at this point you can save or print. 
 
 **Note:** In no way is this tool affiliated with opendatacommunities
 ## What does the EPC Web Application do exactly? ##
 
 The application is designed to be a responsive, simple user interface that allows anybody to look up their Energy Performance Certificate data (EPC) using their postcode to itially search for their full address.
 
-The application does this in several stages. First we will outline the user story and then we can demonstrate that the acceptence criteria have been met and exceeded.
-
+The application does this in several stages. First we will outline the user story and then we can demonstrate that the acceptence criteria have been met and exceeded and show the details on how we accomplished this.
 ### User story/Acceptaance criteria
 
 > As a user I want to be able to look up energy performance data on my home 
@@ -87,7 +88,6 @@ formGroup.replaceChild(dropdown, inputPostcode);
 dropdown.addEventListener("change", function () {
   let submitButton = document.createElement("button");
   submitButton.innerText = "Statistics";
-  console.log("created by sean fox")
   submitButton.classList.add("btn", "btn-success", "ml-2");
   submitButton.addEventListener("click", function () {
     window.location.href = "results.html";
@@ -128,7 +128,7 @@ To render the value so the user can see it, we want to insert HTML into the page
         <td id="current-energy-efficiency"></td>
 </tr>
 ```
-In our case we decided to only display the most useful data due to both it's relevence and the fact that too much information would degrade the user experience. We added an option to view more info for this reason.
+In our case we decided to display only the msot useful information using cards and give the user the option to expand their view to see more details
 <div style="page-break-after: always"></div> 
 
 ## How to use ##
