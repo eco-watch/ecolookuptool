@@ -108,8 +108,25 @@ $.ajax({
         let firstResult = data.rows[0];
 
 ```
-SSince this API can return multiple results (There are usually more than one EPC result for each address since they store the old certificates even when a new one is uploaded) However, by default, the API returns the results in decending order of date meaning the most recenrt result for a given address and postcode will be the most recent and most relevent result. This is why we only need the array in the first 'rows' object
+The EPC data comes back with a list of results in the 'rows' array. There is usualy more than one EPC result for each address since they store the old certificates even when a new one is uploaded. However, by default, the API returns the results in decending order of date meaning the first entry in the 'rows' array for a given address and postcode will be the most recent and most relevent result. This is why we only need the array in the first 'rows' object. It is assigned to firstResult.
 <div style="page-break-after: always"></div> 
+
+The firstResult variable contains 93 values which we selectively according to their relevence or importance. For instance, we would want to display the values from the keys 'current-energy-rating' and 'potential-energy-rating' and be less concerned with entires such as 'building-reference-number' as it is not applicable. This extraction fo individual values from the JSON response is done in step 1 below. 
+```
+1. let currentEnergyEfficiency = firstResult["current-energy-efficiency"];
+
+2. $("#current-energy-efficiency").text(currentEnergyEfficiency);
+```
+Step 2 is the code that allows us to write the value to an object in the DOM, in our case, we write the text inside a tag with the id attribute set as 'current-energy-efficiency' - prefixed with a # as it's an ID.
+
+To render the value so the user can see it, we want to insert HTML into the page like the following example for a creating a table row where the left cell contains the text "Current Energy Efficiency" and the right cell contains whatever value was assigned to the variable current-energy-efficiency, in our case, the value from the API.
+
+```
+<tr>
+    <th scope="row">Current Energy Efficiency</th>
+        <td id="current-energy-efficiency"></td>
+</tr>
+```
 
 
 ## Project Requirements and other references ##
