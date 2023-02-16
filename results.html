@@ -11,75 +11,90 @@
   <body>
     <div class="container">
       <h1 class="text-center my-4">EPC Results</h1>
+      
       <div class="card-deck">
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">Address</h5>
-            <p class="card-text" id="address"></p>
-          </div>
-        </div>
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">Postcode</h5>
-            <p class="card-text" id="postcode"></p>
-          </div>
-        </div>
+
         <div class="card mb-4">
           <div class="card-body">
             <h5 class="card-title">Energy Efficiency (Current)</h5>
+            <p class="card-text" id="current-energy-rating"></p>
+          </div>
+        </div>
+
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Energy Efficiency (Potential)</h5>
             <p class="card-text" id="current-energy-efficiency"></p>
           </div>
         </div>
+
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Energy Efficiency (Current)</h5>
+            <p class="card-text" id="potential-energy-rating"></p>
+          </div>
+        </div>
+
         <div class="card mb-4">
           <div class="card-body">
             <h5 class="card-title">Energy Efficiency (Potential)</h5>
             <p class="card-text" id="potential-energy-efficiency"></p>
           </div>
         </div>
+
       </div>
+
       <div class="card-deck">
+
         <div class="card mb-4">
           <div class="card-body">
-            <h5 class="card-title">Energy Rating (Current)</h5>
-            <p class="card-text" id="current-energy-rating"></p>
+            <h5 class="card-title">Built Form</h5>
+            <p class="card-text" id="built-form"></p>
           </div>
         </div>
+  
         <div class="card mb-4">
           <div class="card-body">
-            <h5 class="card-title">Energy Rating (Potential)</h5>
-            <p class="card-text" id="potential-energy-rating"></p>
+            <h5 class="card-title">Property Type</h5>
+            <p class="card-text" id="property-type"></p>
           </div>
         </div>
+
         <div class="card mb-4">
           <div class="card-body">
             <h5 class="card-title">Total Floor Area</h5>
             <p class="card-text" id="total-floor-area"></p>
           </div>
         </div>
+
         <div class="card mb-4">
           <div class="card-body">
             <h5 class="card-title">Tenure</h5>
             <p class="card-text" id="tenure"></p>
         </div>
       </div>
+    
+    </div>
+    
+    <div class="card-deck">
 
       <div class="card mb-4">
         <div class="card-body">
-          <h5 class="card-title">Built Form</h5>
-          <p class="card-text" id="built-form"></p>
+          <h5 class="card-title">Main Heat Description</h5>
+          <p class="card-text" id="mainheat-description"></p>
         </div>
       </div>
 
       <div class="card mb-4">
         <div class="card-body">
-          <h5 class="card-title">Property Type</h5>
-          <p class="card-text" id="property-type"></p>
+          <h5 class="card-title">Hot Water Description</h5>
+          <p class="card-text" id="hotwater-description"></p>
         </div>
       </div>
 
       <div class="card mb-4">
         <div class="card-body">
-          <h5 class="card-title">Mains Gas Flag</h5>
+          <h5 class="card-title">Mains Gas (Y/N)</h5>
           <p class="card-text" id="mains-gas-flag"></p>
         </div>
       </div>
@@ -90,6 +105,10 @@
           <p class="card-text" id="main-fuel"></p>
         </div>
       </div>
+    
+    </div>
+    
+    <div class="card-deck">
 
       <div class="card mb-4">
         <div class="card-body">
@@ -118,18 +137,15 @@
           <p class="card-text" id="floor-description"></p>
         </div>
       </div>
-
-      <div class="card mb-4">
-        <div class="card-body">
-          <h5 class="card-title">Roof Description</h5>
-          <p class="card-text" id="roof-description"></p>
-        </div>
-      </div>
+    
+    </div>
+    
 
       <div class="row mb-4">
         <div class="col-md-6">
           <button id="previousResultBtn" type="button" class="btn btn-secondary">See Previous Results</button>
         </div>
+
         <div class="col-md-6 text-right">
           <button id="clearStorageBtn" type="button" class="btn btn-danger">Clear Storage</button>
         </div>
@@ -138,9 +154,10 @@
     </div>
   </div>
 </div>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="./assets/js/results.js"></script>
 </body>
 </html>
