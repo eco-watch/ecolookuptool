@@ -57,6 +57,35 @@ video {
   margin-left: 10px;
 }
 
+/* thiis section if for colour coding the energy ratings */
+.rating_a {
+  background: #008054;
+}
+
+.rating_b {
+  background: #19b459;
+}
+
+.rating_c {
+  background: #8dce46;
+}
+
+.rating_d {
+  background: #ffd500;
+}
+
+.rating_e {
+  background: #fcaa65;
+}
+
+.rating_f {
+  background: #ef8023;
+}
+
+.rating_g {
+  background: #e9153b;
+
+  
 @media (max-width: 767px) {
   .green-column {
     height: auto;
