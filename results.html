@@ -1,207 +1,146 @@
 <!DOCTYPE html>
-
 <html>
-
-    <head>
-
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
-        
-        <title>Your Energy efficiency results page</title>
-    </head>
-
-    <body class="bg-img">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-2 green-column"></div>
-                <section>
-                    <div class="card-columns">
-                        <div class="card bg-primary">
-                          <div class="card-body text-center">
-                            <p class="card-text">Current Energy Efficiency</p>
-                          </div>
-                        </div>
-                        <div class="card bg-warning">
-                          <div class="card-body text-center">
-                            <p class="card-text">Some text inside the second card</p>
-                          </div>
-                        </div>
-                        <div class="card bg-success">
-                          <div class="card-body text-center">
-                            <p class="card-text">Some text inside the third card</p>
-                          </div>
-                        </div>
-                        <div class="card bg-danger">
-                          <div class="card-body text-center">
-                            <p class="card-text">Some text inside the fourth card</p>
-                          </div>
-                        </div>
-                        <div class="card bg-light">
-                          <div class="card-body text-center">
-                            <p class="card-text">Some text inside the fifth card</p>
-                          </div>
-                        </div>
-                        <div class="card bg-info">
-                          <div class="card-body text-center">
-                            <p class="card-text">Some text inside the sixth card</p>
-                          </div>
-                        </div>
-                      </div>
-
-                </section>
-
-                
-                
-                <div>
-                    <div>
-
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Subject</th>
-                                    <th scope="col">Result</th>
-                                </tr>
-                            </thead>
-                
-                            <tbody>
-                                <tr>
-                                    <th scope="row">Address</th>
-                                    <td id="propertyAddress"></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Postcode</th>
-                                    <td id="propertyPostcode"></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">current-energy-efficiency</th>
-                                    <td id="current-energy-efficiency"></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">potential-energy-efficiency</th>
-                                    <td id="potential-energy-efficiency"></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">current-energy-rating</th>
-                                    <td id="current-energy-rating"></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">potential-energy-rating</th>
-                                    <td id="potential-energy-rating"></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">total-floor-area</th>
-                                    <td id="total-floor-area"></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">tenure</th>
-                                    <td id="tenure"></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">built-form</th>
-                                    <td id="built-form"></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">property-type</th>
-                                    <td id="property-type"></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">mains-gas-flag</th>
-                                    <td id="mains-gas-flag"></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">main-fuel</th>
-                                    <td id="main-fuel"></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">mainheat-description</th>
-                                    <td id="mainheat-description"></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">hotwater-description</th>
-                                    <td id="hotwater-description"></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">walls-description</th>
-                                    <td id="walls-description"></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">floor-description</th>
-                                    <td id="floor-description"></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">roof-description</th>
-                                    <td id="roof-description"></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">EPC Reference</th>
-                                    <td id="lmk-key"></td>
-                                <tr>
-                                    <th scope="row">EPC Date</th>
-                                    <td id="lodgement-datetime"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-
-                    </div>
-                </div>
-            </div>
-
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+    <title>Eco Lookup Tool - Results</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center my-4">EPC Results</h1>
+      <div class="card-deck">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Address</h5>
+            <p class="card-text" id="address"></p>
+          </div>
         </div>
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Postcode</h5>
+            <p class="card-text" id="postcode"></p>
+          </div>
+        </div>
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Energy Efficiency (Current)</h5>
+            <p class="card-text" id="current-energy-efficiency"></p>
+          </div>
+        </div>
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Energy Efficiency (Potential)</h5>
+            <p class="card-text" id="potential-energy-efficiency"></p>
+          </div>
+        </div>
+      </div>
+      <div class="card-deck">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Energy Rating (Current)</h5>
+            <p class="card-text" id="current-energy-rating"></p>
+          </div>
+        </div>
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Energy Rating (Potential)</h5>
+            <p class="card-text" id="potential-energy-rating"></p>
+          </div>
+        </div>
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Total Floor Area</h5>
+            <p class="card-text" id="total-floor-area"></p>
+          </div>
+        </div>
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Tenure</h5>
+            <p class="card-text" id="tenure"></p>
+        </div>
+      </div>
 
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Built Form</h5>
+          <p class="card-text" id="built-form"></p>
+        </div>
+      </div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="./assets/js/postcodePuller.js"></script>
-        <script src="./assets/js/script.js"></script>
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Property Type</h5>
+          <p class="card-text" id="property-type"></p>
+        </div>
+      </div>
 
-    </body>
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Mains Gas Flag</h5>
+          <p class="card-text" id="mains-gas-flag"></p>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Main Fuel</h5>
+          <p class="card-text" id="main-fuel"></p>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Main Heat Description</h5>
+          <p class="card-text" id="mainheat-description"></p>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Hot Water Description</h5>
+          <p class="card-text" id="hotwater-description"></p>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Walls Description</h5>
+          <p class="card-text" id="walls-description"></p>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Floor Description</h5>
+          <p class="card-text" id="floor-description"></p>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Roof Description</h5>
+          <p class="card-text" id="roof-description"></p>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <button id="previousResultBtn" type="button" class="btn btn-secondary">See Previous Results</button>
+        </div>
+        <div class="col-md-6 text-right">
+          <button id="clearStorageBtn" type="button" class="btn btn-danger">Clear Storage</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./assets/js/results.js"></script>
+</body>
 </html>
-
-<!-- <video autoplay muted playsinline>
-                    <source src="./assets/images/logo.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-
-
-                                    <!-- <tr>
-                <form id="recommendations">
-                    <th scope="row">Recommendations</th>
-                    <td id="recommendations">
-                        <button type="submit" class="btn btn-primary" ID="recommendations">Get Recommendations</button>
-                    </td>
-                    </form>
-            </tr> -->
-                    <!-- <tr>
-    
-                <td id="recommendation-action"></td>
-                <td id="recommendation-cost"></td>
-            </tr>
-            <tr>
-                <th scope="1">Recommendation 1:</th>
-    
-                <td id="recommendation-action"></td>
-                <td id="recommendation-cost"></td>
-            </tr>
-            <tr>
-                <th scope="2">Recommendation 2:</th>
-    
-                <td id="recommendation-action"></td>
-                <td id="recommendation-cost"></td>
-            </tr>
-            <tr>
-                <th scope="3">Recommendation 3:</th>
-    
-                <td id="recommendation-action"></td>
-                <td id="recommendation-cost"></td>
-            </tr>
-            <tr>
-                <th scope="4">Recommendation 4:</th>
-                <td id="recommendation-action"></td>
-                <td id="recommendation-cost"></td>
-            </tr> -->
