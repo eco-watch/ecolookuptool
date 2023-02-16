@@ -1,13 +1,11 @@
-//function to call the EPC API when the user submits their address
+// function to call the EPC API when the user submits their address
 function callEpcApi(address, postcode) {
 
     const encodedApiKey = "ZnJvbnRlbmRkZXZAc3RheWhvbWUubGk6M2U3MGM4YjYzMDhkZTQ0OWM3YmY4YzZhMTI4N2FiYTVjYzViNGE0MQ=="; // new api key
     const endpoint = `https://epc.opendatacommunities.org/api/v1/domestic/search?address=${address}&postcode=${postcode}`; // EPC endpoint
-
-    //https://epc.opendatacommunities.org/domestic/search?address=172+palatine+road&postcode=fy1+4du&api=ZnJvbnRlbmRkZXZAc3RheWhvbWUubGk6M2U3MGM4YjYzMDhkZTQ0OWM3YmY4YzZhMTI4N2FiYTVjYzViNGE0MQ== ?/
+    
     console.log(`Querying ${endpoint}`);
-
-    // this script is using jQuery to make the call to the EPC API
+    
     $.ajax({
         type: "GET",
         url: endpoint,
@@ -15,7 +13,7 @@ function callEpcApi(address, postcode) {
             Accept: "application/json",
             Authorization: "Basic " + encodedApiKey
         },
-        success: function (data) {
+        success: function(data) {
             console.log("Response is in JSON format");
             console.log(data);
 
@@ -62,7 +60,7 @@ function callEpcApi(address, postcode) {
 
             let mainheatDescription = firstResult["mainheat-description"];
             console.log("main heat description: " + mainheatDescription);
-
+            
             let hotwaterDescription = firstResult["hotwater-description"];
             console.log("hot water description: " + hotwaterDescription);
 
@@ -87,9 +85,10 @@ function callEpcApi(address, postcode) {
             let lmkKey = firstResult["lmk-key"];
             console.log("lmk key: " + lmkKey);
 
-            // calls the getCertificate function to retrieve the certificate if this functionality gets added later
-            // write the parsed results from the apin JSON to the HTML page
-            // these are the IDs of the HTML elements - can edit these here or in HTML for final version
+            // calls the getCertificate function to retrieve the certificate as well
+            // getRecommendations(lmkKey);
+
+            // display the results
             $("#address").text(propertyAddress);
             $("#postcode").text(propertyPostcode);
             $("#current-energy-efficiency").text(currentEnergyEfficiency);
@@ -112,51 +111,22 @@ function callEpcApi(address, postcode) {
             $("#lodgement-datetime").text(lodgementDatetime);
             $("#lmk-key").text(lmkKey);
         },
-        // error handling
-        error: function (error) {
+        error: function(error) {
             console.error("Error parsing JSON: ", error);
-        }
-    });
+    }
+});
+}
 
-$(document).ready(function () {
-    $("#test").click(function (event) {
+$(document).ready(function() {
+    $("#test").click(function(event) {
+
+        // prevent the form from submitting
         event.preventDefault();
+        
         const address = $("#address").val();
         const postcode = $("#postcode").val();
+        
         console.log(`Address: ${address} Postcode: ${postcode}`);
         callEpcApi(address, postcode);
     });
 });
-
-}; // end of document.ready
-
-
-    // event handler for the submit button is called when the page is loaded - it is
-    // in document.ready so that the button is only clicked when the page is loaded
-
-    // $(document).ready(function () {
-    //     // listens for a click event on the button with the id "test"
-    //     $("#test").click(function (event) {
-    //         // prevent default prevents the form from submitting
-    //         event.preventDefault();
-    //         // this takes the address value from the input box with the id "address"    
-    //         // this needs tio be edited when integrating into the address lookup fucntion     
-    //         const address = $("#address").val();
-    //         // this takes the postcode value from the input box with the id "postcode"
-    //         // edit as per requiremetns to integrate with address lookup script and html
-    //         const postcode = $("#postcode").val();
-    //         // for debugging purposes
-    //         console.log(`Address: ${address} Postcode: ${postcode}`);
-    //         // calls the function to make the API call
-    //         callEpcApi(address, postcode);
-    //     });  
-    // });
-
-
-
-
-
-
-
-
-

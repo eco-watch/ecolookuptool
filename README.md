@@ -10,7 +10,6 @@
 * [User story/acceptence criteria](#user-story)
 * [How does it work?](#how-it-works)
 * [How to use](#how-to-use)
-* [How does it work?](#how-it-works)
 * [Agile Methodologies](#agile-methodology)
     - [UX and UI designs](#ux-ui-dev)
     - [Wireframing](#wireframing)
@@ -121,15 +120,72 @@ Step 2 is the code that allows us to write the value to an object in the DOM, in
 
 To render the value so the user can see it, we want to insert HTML into the page like the following example for a creating a table row where the left cell contains the text "Current Energy Efficiency" and the right cell contains whatever value was assigned to the variable current-energy-efficiency, in our case, the value from the API.
 
+
+
 ```
 <tr>
     <th scope="row">Current Energy Efficiency</th>
         <td id="current-energy-efficiency"></td>
 </tr>
 ```
+In our case we decided to only display the most useful data due to both it's relevence and the fact that too much information would degrade the user experience. We added an option to view more info for this reason.
+<div style="page-break-after: always"></div> 
+
+## How to use ##
+### 1. User inputs their postcode into a form and clicks the search button
+![website hompage](./assets/images/wireframe/concept3/singlePages/p1HomPage.png)
+
+### 2. All corresponding addresses appear as a drop-down box
+![drop-down menu page](./assets/images/wireframe/concept3/singlePages/p2AfterPostcode.png)
+
+### 2.5 If you search an invalid address you can click on the red button to search for another one
+![invalid address page](./assets/images/wireframe/concept3/singlePages/p4InvalidAddress.png)
+
+### 3. User selects their address from the list and clicks "Statistics"
+![options page with "Statistics", "Address results" and "Clear" button](./assets/images/wireframe/concept3/singlePages/p3AfterAddress.png)
+
+### 4. The formated address is sent to the EPC API and returns the most up to date information about their property, click on the "Show more" button to see all the informations
+![page with property informations in a table](./assets/images/wireframe/concept3/singlePages/p5EPCResults.png)
+
+![page with all the property information in a fullsize table](./assets/images/wireframe/concept3/singlePages/p6EPCResultsShowMore.png)
 
 
-## Project Requirements and other references ##
+
+
+
+## Agile Methodologies ##
+
+### UX and UI designs
+
+We started a discussion about how the user interface might look and  went through a selection of prototypes for which wireframes were constructed on whimsical
+
+> Credits to Marco Pacciardi Cini - Github profile: https://github.com/MarcoPacciardiCini
+
+placeholder
+
+
+### First Concept:
+
+![three first concept pages in a row: the hompage, the page with property informations in a table and the page with all the property information in a fullsize table](./assets/images/wireframe/concept1/concept1AllPages.png)
+
+### Second Concept:
+
+![three second concept pages in a row: the hompage, the page for invalid address and the options page with "Statistics", "Address results" and "Clear" button](./assets/images/wireframe/concept2/concept2AllPages.png)
+
+### Third Concept:
+
+![two third concept pages in a row: the hompage and the addresses page](./assets/images/wireframe/concept3/concept3PostcodePages.png)
+
+![two third concept pages in a row: the options page with "Statistics", "Address results" and "Clear" button and the page for invalid address](./assets/images/wireframe/concept3/concept3OptionPages.png)
+
+![two third concept pages in a row: the page with property informations in a table and the page with all the property information in a fullsize table](./assets/images/wireframe/concept3/concept3EPCResultsPages.png)
+
+
+
+## Resources:
+[Bootstrap](https://www.npmjs.com/package/bootstrap) | [GetAddress API documentation](https://documentation.getaddress.io) | [Domestic EPC search API documentation](https://epc.opendatacommunities.org/docs/api/domestic)
+
+## Project Requirements ##
 
 
 <div style="page-break-after: always"></div> 
@@ -199,46 +255,6 @@ This covers both the codebase and any sample code in the documentation.
 
  - - - - - - -
 
-## How to use ##
-
-### 1. User inputs their postcode into a form and clicks the search button
-![website hompage](./assets/images/wireframe/concept3/singlePages/p1HomPage.png)
-
-
-### 2. All corresponding addresses appear as a drop-down box
-![drop-down menu page](./assets/images/wireframe/concept3/singlePages/p2AfterPostcode.png)
-
-### 2.5 If you search an invalid address you can click on the red button to search for another one
-![invalid address page](./assets/images/wireframe/concept3/singlePages/p4InvalidAddress.png)
-
-### 3. User selects their address from the list and clicks "Statistics"
-![options page with "Statistics", "Address results" and "Clear" button](./assets/images/wireframe/concept3/singlePages/p3AfterAddress.png)
-
-### 4. The formated address is sent to the EPC API and returns the most up to date information about their property, click on the "Show more" button to see all the informations
-![page with property informations in a table](./assets/images/wireframe/concept3/singlePages/p5EPCResults.png)
-
-![page with all the property information in a fullsize table](./assets/images/wireframe/concept3/singlePages/p6EPCResultsShowMore.png)
-
-## Resources:
-[Bootstrap](https://www.npmjs.com/package/bootstrap) | [GetAddress API documentation](https://documentation.getaddress.io) | [Domestic EPC search API documentation](https://epc.opendatacommunities.org/docs/api/domestic)
-
-## Wireframes
-
-### First Concept:
-
-![three first concept pages in a row: the hompage, the page with property informations in a table and the page with all the property information in a fullsize table](./assets/images/wireframe/concept1/concept1AllPages.png)
-
-### Second Concept:
-
-![three second concept pages in a row: the hompage, the page for invalid address and the options page with "Statistics", "Address results" and "Clear" button](./assets/images/wireframe/concept2/concept2AllPages.png)
-
-### Third Concept:
-
-![two third concept pages in a row: the hompage and the addresses page](./assets/images/wireframe/concept3/concept3PostcodePages.png)
-
-![two third concept pages in a row: the options page with "Statistics", "Address results" and "Clear" button and the page for invalid address](./assets/images/wireframe/concept3/concept3OptionPages.png)
-
-![two third concept pages in a row: the page with property informations in a table and the page with all the property information in a fullsize table](./assets/images/wireframe/concept3/concept3EPCResultsPages.png)
 
 
 
