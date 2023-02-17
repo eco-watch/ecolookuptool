@@ -57,6 +57,40 @@ video {
   margin-left: 10px;
 }
 
+.card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  flex-basis: calc(25% - 1rem);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-basis: calc(50% - 1rem);
+  }
+}
+
+.card-columns {
+  column-count: 1;
+}
+
+@media (min-width: 576px) {
+  .card-columns {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-columns {
+    column-count: 4;
+  }
+}
+
+
 @media (max-width: 767px) {
   .green-column {
     height: auto;

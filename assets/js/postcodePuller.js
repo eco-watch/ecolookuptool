@@ -117,4 +117,3 @@ localStorage.setItem("results", JSON.stringify(results));
   let formGroup = document.querySelector(".form-group");
   formGroup.appendChild(invalidPostcodeButton);
 });
-
