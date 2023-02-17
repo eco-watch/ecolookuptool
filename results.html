@@ -6,101 +6,120 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+    <body class="bg-img">
     <title>Eco Lookup Tool - Results</title>
   </head>
   <body>
-    <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ms-auto">
+      <div class="container fluid">
+        <a class="navbar-brand me-2" href=""><!-- put logo here later --></a>
+        <div class="navbar-nav" id="navbarRightAlignExample">
+
+          <div class="d-flex align-items-right">
+            <button type="button" class="btn btn-primary me-3">
+              <p id="get-results">Please wait...</p>
+            </button>
+
+        <a class="btn btn-dark px-3" href="https://github.com/eco-watCh/eco-lookup-tool"role="button">
+          <i class="fab fa-github"></i>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+    <div class="container-fluid">
       <h1 class="text-center my-4">EPC Results</h1>
       
-      <div class="card-deck">
+      <div class="card-deck text-center">
 
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">Energy Efficiency (Current)</h5>
+        <div class="card text-center border border-primary shadow-0">
+          <div class="card-body current-energy-rating">
+            <h5 class="card-title">Energy Rating (current)</h5>
             <p class="card-text" id="current-energy-rating"></p>
           </div>
         </div>
 
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">Energy Efficiency (Potential)</h5>
+        <div class="card text-center border border-primary shadow-0">
+          <div class="card-body current-energy-efficiency">
+            <h5 class="card-title">Energy Efficiency (Current)</h5>
             <p class="card-text" id="current-energy-efficiency"></p>
           </div>
         </div>
 
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">Energy Efficiency (Current)</h5>
+        <div class="card text-center border border-primary shadow-0">
+          <div class="card-body potential-energy-rating">
+            <h5 class="card-title">Potential Energy Rating</h5>
             <p class="card-text" id="potential-energy-rating"></p>
           </div>
         </div>
 
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">Energy Efficiency (Potential)</h5>
+        <div class="card text-center border border-primary shadow-0">
+          <div class="card-body potential-energy-efficiency">
+            <h5 class="card-title">Potential Energy Efficiency</h5>
             <p class="card-text" id="potential-energy-efficiency"></p>
           </div>
         </div>
-
+      
       </div>
 
-      <div class="card-deck">
+      <div class="card-deck text-center">
 
-        <div class="card mb-4">
-          <div class="card-body">
+        <div class="card text-center border border-primary shadow-0">
+          <div class="card-body built-form">
             <h5 class="card-title">Built Form</h5>
             <p class="card-text" id="built-form"></p>
           </div>
         </div>
   
-        <div class="card mb-4">
-          <div class="card-body">
+        <div class="card text-center border border-primary shadow-0">
+          <div class="card-body property-type">
             <h5 class="card-title">Property Type</h5>
             <p class="card-text" id="property-type"></p>
           </div>
         </div>
 
-        <div class="card mb-4">
-          <div class="card-body">
+        <div class="card text-center border border-primary shadow-0">
+          <div class="card-body total-floor-area">
             <h5 class="card-title">Total Floor Area</h5>
             <p class="card-text" id="total-floor-area"></p>
           </div>
         </div>
 
-        <div class="card mb-4">
-          <div class="card-body">
+        <div class="card text-center border border-primary shadow-0">
+          <div class="card-body tenure">
             <h5 class="card-title">Tenure</h5>
             <p class="card-text" id="tenure"></p>
         </div>
       </div>
-    
     </div>
     
-    <div class="card-deck">
+    <div class="card-deck text-center">
 
-      <div class="card mb-4">
-        <div class="card-body">
+      <div class="card text-center border border-primary shadow-0">
+        <div class="card-body mainheat-description">
           <h5 class="card-title">Main Heat Description</h5>
           <p class="card-text" id="mainheat-description"></p>
         </div>
       </div>
 
-      <div class="card mb-4">
-        <div class="card-body">
+      <div class="card text-center border border-primary shadow-0">
+        <div class="card-body hotwater-description">
           <h5 class="card-title">Hot Water Description</h5>
           <p class="card-text" id="hotwater-description"></p>
         </div>
       </div>
 
-      <div class="card mb-4">
-        <div class="card-body">
+      <div class="card text-center border border-primary shadow-0">
+        <div class="card-body mains-gas-flag">
           <h5 class="card-title">Mains Gas (Y/N)</h5>
           <p class="card-text" id="mains-gas-flag"></p>
         </div>
       </div>
 
-      <div class="card mb-4">
-        <div class="card-body">
+      <div class="card text-center border border-primary shadow-0">
+        <div class="card-body main-fuel">
           <h5 class="card-title">Main Fuel</h5>
           <p class="card-text" id="main-fuel"></p>
         </div>
@@ -108,31 +127,31 @@
     
     </div>
     
-    <div class="card-deck">
+    <div class="card-deck text-center">
 
-      <div class="card mb-4">
-        <div class="card-body">
+      <div class="card text-center border border-primary shadow-0">
+        <div class="card-body mainheat-description">
           <h5 class="card-title">Main Heat Description</h5>
           <p class="card-text" id="mainheat-description"></p>
         </div>
       </div>
 
-      <div class="card mb-4">
-        <div class="card-body">
+      <div class="card text-center border border-primary shadow-0">
+        <div class="card-body hotwater-description">
           <h5 class="card-title">Hot Water Description</h5>
           <p class="card-text" id="hotwater-description"></p>
         </div>
       </div>
 
-      <div class="card mb-4">
-        <div class="card-body">
+      <div class="card text-center border border-primary shadow-0">
+        <div class="card-body walls-description">
           <h5 class="card-title">Walls Description</h5>
           <p class="card-text" id="walls-description"></p>
         </div>
       </div>
 
-      <div class="card mb-4">
-        <div class="card-body">
+      <div class="card text-center border border-primary shadow-0">
+        <div class="card-body floor-description">
           <h5 class="card-title">Floor Description</h5>
           <p class="card-text" id="floor-description"></p>
         </div>
@@ -140,24 +159,59 @@
     
     </div>
     
+<div class="container overflow-hidden">
+    <div class="row gx-3">
+      
 
-      <div class="row mb-4">
-        <div class="col-md-6">
+        <div class="col-md-4 text-left">
           <button id="previousResultBtn" type="button" class="btn btn-secondary">See Previous Results</button>
         </div>
 
-        <div class="col-md-6 text-right">
+        <div class="col-md-4 text-center">
+          <button id="downloadZip" type="button" class="btn btn-primary">Download .ZIP</button>
+        </div>
+
+        <div class="col-md-4 text-right">
           <button id="clearStorageBtn" type="button" class="btn btn-danger">Clear Storage</button>
         </div>
       </div>
-
     </div>
+
   </div>
 </div>
+
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="./assets/js/results.js"></script>
+
+<!-- 
+<footer class="social text-center text-lg-start">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md text-center text-lg-start inline">
+        <h3 class="text">Check out our Github profiles</h3>
+        <ul class="social-icons text-center text-lg-start">
+          <a class="btn text-white" style="background-color: #333333;" href="https://github.com/Neverekt" role="button">
+            <i class="fab fa-github"></i></a>
+
+          <li>
+            <a href="https://github.com/Neverekt" target="_blank">Neverekt Github</a> 
+          </li>
+          <li>
+          <a class="btn text-white" style="background-color: #333333;" href="https://github.com/DrGunbot" role="button">
+            <i class="fab fa-github"></i></a><li>
+            <a href="https://github.com/DrGunbot" target="_blank">DrGunbot Github</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer> 
+-->
+
 </body>
 </html>
