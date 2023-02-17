@@ -84,8 +84,9 @@ video {
 
 .rating_g {
   background: #e9153b;
+}
 
-  
+
 @media (max-width: 767px) {
   .green-column {
     height: auto;

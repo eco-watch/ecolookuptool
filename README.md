@@ -6,22 +6,21 @@
 https://eco-watch.github.io/ecolookuptool/index.html
 
 ## Table of contents
-* [The Scope of the Project](#project-scope)
-* [What is the EPC web application?](#what-it-is)
-* [What does the EPC web application do exactly?](#what-does-it-do)
-* [User story/acceptence criteria](#user-story)
-* [How does it work?](#how-it-works)
+* [The Scope of the Project](#the-scope-of-the-project)
+* [What is the EPC web application?](#what-is-the-epc-web-application)
+* [What does the EPC web application do exactly?](#what-does-the-epc-web-application-do-exactly)
+* [User story/acceptence criteria](#user-storyacceptance-criteria)
+* [How does it work?](#how-does-the-application-work)
 * [How to use](#how-to-use)
-* [Agile Methodologies](#agile-methodology)
-    - [UX and UI designs](#ux-ui-dev)
-    - [Wireframing](#wireframing)
+* [Agile Methodologies](#agile-methodologies)
+    - [UX and UI designs](#ux-and-ui-designs)
+    - [Wireframing](#wireframing-examples)
     - [Project requirements](#project-requirements)
-    - [Further Development](#furher-work)
     - [References](#references)
-* [License](#license)
+* [License](#licence)
 
 
-## The scope of the project ##
+## The scope of the project
 
 This repositoery forms the submission materials and deployment of the first of two group projects that count towards the formal grades received from completion of the front-end web development bootcamp. The product has been developed to satisfy the [Requirements](#project-requirements)  at the end of the article
 
@@ -35,7 +34,7 @@ This easy to use EPC web app is built on top of the opendatacommunities Domestic
 The application is designed to be a responsive, simple user interface that allows anybody to look up their Energy Performance Certificate data (EPC) using their postcode to itially search for their full address.
 
 The application does this in several stages. First we will outline the user story and then we can demonstrate that the acceptence criteria have been met and exceeded and show the details on how we accomplished this.
-### User story/Acceptaance criteria
+### User story/acceptance criteria
 
 > As a user I want to be able to look up energy performance data on my home 
 
@@ -161,7 +160,7 @@ We started a discussion about how the user interface might look and  went throug
 
 > Credits to Marco Pacciardi Cini - Github profile: https://github.com/MarcoPacciardiCini
 
-placeholder
+### Wireframing examples
 
 
 ### First Concept:
@@ -182,8 +181,11 @@ placeholder
 
 
 
-## Resources:
-[Bootstrap](https://www.npmjs.com/package/bootstrap) | [GetAddress API documentation](https://documentation.getaddress.io) | [Domestic EPC search API documentation](https://epc.opendatacommunities.org/docs/api/domestic)
+## References
+
+                                                                                                                           
+
+ [GetAddress.io Address finder API documentation](https://documentation.getaddress.io) | [OpenDataCommunities Domestic EPC search API documentation](https://epc.opendatacommunities.org/docs/api/domestic) | [Bootstrap Documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/) | [jQuery Documention](https://api.jquery.com/) 
 
 ## Project Requirements ##
 
@@ -192,32 +194,31 @@ placeholder
 
 
 ### Grading - Technical Acceptance Criteria: 25% ###
-- Satisfies the following code requirements:
-- Application uses at least two [server-side APIs](https://coding-boot-camp.github.io/full-stack/apis/api-resources)
-- Application uses client-side storage to store persistent data.
+- Application uses at least two [server-side APIs](https://coding-boot-camp.github.io/full-stack/apis/api-resources) - [X]
+- Application uses client-side storage to store persistent data.  - [X]
 - Application doesn't use JS alerts, prompts, or confirms (uses modals instead).
-- Application uses Bootstrap.
-- Application is interactive (accepts and responds to user input)
+- Application uses Bootstrap.  - [X]
+- Application is interactive (accepts and responds to user input)  - [X]
 
 #### Concept 10% ####
-- Application should be a unique and novel idea.
+- Application should be a unique and novel idea. - [X]
 - Your group should clearly and concisely articulate your project idea.
 
 #### Deployment: 20%
-- Application deployed at live URL and loads with no errors.
-- Application GitHub URL submitted.
+- Application deployed at live URL and loads with no errors. - [X]
+- Application GitHub URL submitted. - []
 
 #### Repository Quality: 10%
-- Repository has a unique name.
-- Repository follows best practices for file structure and naming conventions.
-- Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-- Repository contains multiple descriptive commit messages.
-- Repository contains a quality README file with description, screenshot, and link to deployed application.
+- Repository has a unique name. - [X]
+- Repository follows best practices for file structure and naming conventions. - [X]
+- Repository follows best practices for class/id naming conventions, indentation, quality comments, etc. - [X]
+- Repository contains multiple descriptive commit messages. - [X]
+- Repository contains a quality README file with description, screenshot, and link to deployed application. - [X]
 
 #### Application Quality: 15%
 - Application user experience is intuitive and easy to navigate.
 - Application user interface style is clean and polished.
-- Application is responsive.
+- Application is responsive. - [X]
 
 #### Presentation 10%
 - Your group should present using Powerpoint or a similar presentation software.
@@ -248,7 +249,10 @@ placeholder
 
 ## Licence
 
-Unless stated otherwise, the codebase is released under [the MIT License][mit].
+Unless stated otherwise, the codebase is released under 
+ [The MIT license](https://mit-license.org/)
+
+
 This covers both the codebase and any sample code in the documentation.
 
 
