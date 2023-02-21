@@ -31,7 +31,7 @@ This easy to use EPC web app is built on top of the opendatacommunities Domestic
 **Note:** In no way is this tool affiliated with opendatacommunities
 ## What does the EPC Web Application do exactly? ##
 
-The application is designed to be a responsive, simple user interface that allows anybody to look up their Energy Performance Certificate data (EPC) using their postcode to itially search for their full address.
+The application is designed to be a responsive, simple user interface that allows anybody to look up their Energy Performance Certificate data (EPC) using their postcode to search for their full address.
 
 The application does this in several stages. First we will outline the user story and then we can demonstrate that the acceptence criteria have been met and exceeded and show the details on how we accomplished this.
 ### User story/acceptance criteria

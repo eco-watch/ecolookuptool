@@ -41,7 +41,7 @@ function callEpcApi(address, postcode) {
         console.log("EPC data saved to local storage");
 
         const displayProperties = ['address', 'postcode', 'current-energy-efficiency', 'potential-energy-efficiency', 
-        'current-energy-rating', 'potential-energy-rating', 'total-floor-area', 'tenure', 'built-form', 'property-type', 
+        'current-energy-rating', 'potential-energy-rating', 'heating-cost-current', 'heating-cost-potential','hot-water-cost-current','hot-water-cost-potential','total-floor-area', 'tenure', 'built-form', 'property-type', 
         'mains-gas-flag', 'main-fuel', 'mainheat-description', 'hotwater-description', 'walls-description', 
         'floor-description', 'roof-description', 'lodgement-datetime', 'lmk-key'];
         
@@ -51,6 +51,8 @@ function callEpcApi(address, postcode) {
 
         let currentEnergyRating = displayProperties["current-energy-rating"];
         let potentialEnergyRating = displayProperties["potential-energy-rating"];
+
+        let costArray = ['heating-cost-current', 'heating-cost-potential','hot-water-cost-current','hot-water-cost-potential']; 
 
       // check the current and potential ratings and format the relevant card with a class from the css sheet
       switch (currentEnergyRating) {
@@ -103,10 +105,13 @@ function callEpcApi(address, postcode) {
           $("#potential-energy-rating").addClass("rating_g");
         }
 
-        // write a concatenated hyperlink to the id download-results in the results.html page
-        let lmkKey = firstResult["lmk-key"];
-        let downloadLink = `https://epc.opendatacommunities.org/domestic/certificate/${lmkKey}`;
-        $("#download-results").html(`<a href="${downloadLink}" target="_blank">Download your results (.ZIP)</a>`);
+        function addDownloadLink() {
+          let lmkKey = firstResult["lmk-key"];
+          let downloadLink = `https://epc.opendatacommunities.org/domestic/certificate/${lmkKey}`;
+          $("#download-results").html(`<a href="${downloadLink}" target="_blank">Download Now (.ZIP)</a>`);
+        }
+        
+        
 
 
         //   // rendering the results
@@ -201,6 +206,15 @@ function callEpcApi(address, postcode) {
 
     callEpcApi(address, postcode);
   });
+
+  $(document).ready(function() {
+    $("#downloadZip").submit(function(event) {
+      event.preventDefault();
+      addDownloadLink();
+    });
+  });
+
+
 
   // let epcData = {
   //   propertyAddress,
