@@ -1,5 +1,5 @@
-// let apiKey = "j5vtabUijUO7Edl6aMAjeA38021";
-let apiKey = "_xy_IpegBUyjs-5pq0GoAA38077";
+// let apiKey = "1AzPegcMMkOQVoBwvo0EFQ37970"; // rotate these every 20 uses
+let apiKey = "_xy_IpegBUyjs-5pq0GoAA38077"; // added new key for zoom demo
 let addressEndpoint = (postcode) => `https://api.getAddress.io/find/${postcode}?api-key=${apiKey}`;
 
 // Ask user for postcode
